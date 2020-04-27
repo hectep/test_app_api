@@ -14,3 +14,21 @@ docker-compose up
 ```
 
 Launch tests using ```pytest``` while in project directory
+
+#API documentation:
+For detailed version refer to api-documentation.html
+- POST, GET: ```/api/app/```
+
+creates new app and retrieves list of apps
+
+- GET, DELETE, PUT: ```/api/app/<int:pk>/```
+
+GET retrieves app object, PUT updates name of an app object
+
+- PUT: ```/update_key/<int:pk>/```
+
+regenerates api-key of an app and returns new api-key
+
+- GET ```test/<str:api_key>/```
+
+retrieves app object by api-key
